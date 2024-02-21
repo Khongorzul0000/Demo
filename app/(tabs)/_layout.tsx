@@ -1,3 +1,4 @@
+import { AntDesign } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 
 const TabLayout: React.FC = () => {
@@ -6,7 +7,8 @@ const TabLayout: React.FC = () => {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Volfour',
+          tabBarIcon: () => <AntDesign name="home" size={24} color="black" />,
         }}
       />
       <Tabs.Screen
