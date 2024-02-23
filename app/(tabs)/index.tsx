@@ -31,7 +31,7 @@ export default function TabOneScreen(): React.ReactNode {
             <Text style={{ fontSize: 23, marginBottom: 20, color: '#2bb730' }}>Categories</Text>
           </View>
           <ScrollView horizontal>
-            <TouchableOpacity style={styles.line}>
+            <TouchableOpacity style={styles.line1}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                 <Image
                   height={60}
@@ -44,8 +44,8 @@ export default function TabOneScreen(): React.ReactNode {
                 <Text>animal</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.line}>
-              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <TouchableOpacity style={styles.line1}>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image
                   height={60}
                   width={60}
@@ -57,7 +57,7 @@ export default function TabOneScreen(): React.ReactNode {
                 <Text>animal</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.line}>
+            <TouchableOpacity style={styles.line1}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                 <Image
                   height={60}
@@ -89,7 +89,7 @@ export default function TabOneScreen(): React.ReactNode {
                 />
                 <View>
                   <Text style={{ color: '#2bb730' }}>Homiloki</Text>
-                  <Text style={{ color: ' #4f5e64 ' }}>in Ulaanbaatar</Text>
+                  <Text style={{ color: '#4f5e64' }}>in Ulaanbaatar</Text>
                 </View>
               </View>
               <Text style={{ fontWeight: '600', fontSize: 20, marginBottom: 10, marginTop: 10 }}>
@@ -116,7 +116,7 @@ export default function TabOneScreen(): React.ReactNode {
                 />
                 <View>
                   <Text style={{ color: '#2bb730' }}>Homiloki</Text>
-                  <Text style={{ color: ' #4f5e64 ' }}>in Ulaanbaatar</Text>
+                  <Text style={{ color: '#4f5e64' }}>in Ulaanbaatar</Text>
                 </View>
               </View>
               <Text style={{ fontWeight: '600', fontSize: 20, marginBottom: 10, marginTop: 10 }}>
@@ -163,5 +163,13 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: 'white',
     borderRadius: 20,
+  },
+  line1: {
+    borderColor: 'black',
+    borderWidth: 1,
+    padding: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    marginRight: 15,
   },
 });
