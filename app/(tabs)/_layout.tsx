@@ -43,7 +43,7 @@ const TabLayout: React.FC = () => {
             return (
               <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 17 }}>
                 <AntDesign name="team" size={24} color={focused ? 'black' : 'grey'} />
-                <Text style={{ fontSize: 10, color: 'black' }}>Profile</Text>
+                <Text style={{ fontSize: 10, color: 'black' }}>Community</Text>
               </View>
             );
           },
@@ -57,8 +57,8 @@ const TabLayout: React.FC = () => {
             // eslint-disable-next-line no-unused-expressions
             return (
               <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 17 }}>
-                <AntDesign name="user" size={24} color={focused ? 'black' : 'grey'} />
-                <Text style={{ fontSize: 10, color: 'black' }}>Profile</Text>
+                <AntDesign name="exclamationcircleo" size={24} color={focused ? 'black' : 'grey'} />
+                <Text style={{ fontSize: 10, color: 'black' }}>Report feedback support</Text>
               </View>
             );
           },

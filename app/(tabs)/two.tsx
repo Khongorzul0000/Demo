@@ -6,10 +6,7 @@ export default function TabTwoScreen(): React.ReactNode {
       <View style={styles.container}>
         <View style={{ width: '100%' }}>
           <Image
-            // height={150}
-            // width={150}
             style={{ height: 250, width: '100%' }}
-            // style={{ borderRadius: 100 }}
             source={{
               uri: 'https://i.insider.com/5e14bfdfb13e47060a703953?width=600&format=jpeg&auto=webp',
             }}
@@ -28,7 +25,7 @@ export default function TabTwoScreen(): React.ReactNode {
             <Text style={{ fontWeight: '600', fontSize: 25, marginTop: 10 }}>
               Hiisen sain duriin ajiluud
             </Text>
-            <ScrollView style={{ marginTop: 20 }} horizontal>
+            <ScrollView style={{ marginTop: 20, marginBottom: 20 }} horizontal>
               <TouchableOpacity style={styles.line1}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                   <Image
