@@ -15,7 +15,7 @@ export const image = [
     id: '3',
     title:
       'The impact of your time and effort as a volunteer may be immeasurable, but its significance resonates in the lives you touch and the communities you uplift.',
-    url: 'https://i.pinimg.com/564x/de/5c/bc/de5cbc29885153d8add0cea96db321a3.jpg',
+    url: 'https://i.pinimg.com/564x/ca/a2/d7/caa2d71338c7de0f8a1a4466a33f2e8a.jpg',
   },
   {
     id: '4',

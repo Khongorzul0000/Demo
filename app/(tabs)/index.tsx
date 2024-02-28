@@ -74,55 +74,43 @@ export default function TabOneScreen(): React.ReactNode {
           </View>
         </SafeAreaView>
         <View style={{ padding: 20 }}>
-          <View style={styles.flex}>
-            <Text style={{ fontSize: 23, marginBottom: 20, color: '#2bb730' }}>Categories</Text>
-          </View>
+          <Text style={styles.title}>Categories</Text>
           <ScrollView horizontal>
             <TouchableOpacity style={styles.line1}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                 <Image
-                  height={60}
-                  width={60}
-                  style={{ borderRadius: 100 }}
+                  style={styles.categoryPic}
                   source={{
                     uri: 'https://www.shutterstock.com/image-photo/this-beautiful-animel-260nw-2304786059.jpg',
                   }}
                 />
-                <Text>animal</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.line1}>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Image
-                  height={60}
-                  width={60}
-                  style={{ borderRadius: 100 }}
-                  source={{
-                    uri: 'https://www.shutterstock.com/image-photo/this-beautiful-animel-260nw-2304786059.jpg',
-                  }}
-                />
-                <Text>animal</Text>
+                <Text style={{ color: 'white' }}>Cleaning</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.line1}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                 <Image
-                  height={60}
-                  width={60}
-                  style={{ borderRadius: 100 }}
+                  style={styles.categoryPic}
                   source={{
                     uri: 'https://www.shutterstock.com/image-photo/this-beautiful-animel-260nw-2304786059.jpg',
                   }}
                 />
-                <Text>animal</Text>
+                <Text style={{ color: 'white' }}>Enviroment</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.line1}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Image
+                  style={styles.categoryPic}
+                  source={{
+                    uri: 'https://www.shutterstock.com/image-photo/this-beautiful-animel-260nw-2304786059.jpg',
+                  }}
+                />
+                <Text style={{ color: 'white' }}>Animal</Text>
               </View>
             </TouchableOpacity>
           </ScrollView>
-          <View style={styles.flex}>
-            <Text style={{ fontSize: 23, marginBottom: 20, color: '#2bb730' }}>
-              Latiest volunteers
-            </Text>
-          </View>
+          <Text style={styles.title}>Latiest volunteers</Text>
           <TouchableOpacity style={{ marginBottom: 20 }}>
             <View style={styles.line}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
@@ -135,41 +123,12 @@ export default function TabOneScreen(): React.ReactNode {
                   }}
                 />
                 <View>
-                  <Text style={{ color: '#2bb730' }}>Homiloki</Text>
-                  <Text style={{ color: '#4f5e64' }}>in Ulaanbaatar</Text>
+                  <Text style={{ color: 'white' }}>Homiloki</Text>
+                  <Text style={{ color: '#06C149' }}>in Ulaanbaatar</Text>
                 </View>
               </View>
-              <Text style={{ fontWeight: '600', fontSize: 20, marginBottom: 10, marginTop: 10 }}>
-                Onon goliin hogiig tsverletsgeeye
-              </Text>
-              <Text>
-                As you embark upon each day, remember that within you lies an abundance of potential
-                waiting to be unleashed. You are capable of achieving greatness, of making a
-                difference, of leaving an indelible mark on the world. Take a moment to acknowledge
-                your strengths, your resilience, and your unwavering spirit.
-              </Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity style={{ marginBottom: 20 }}>
-            <View style={styles.line}>
-              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                <Image
-                  height={50}
-                  width={50}
-                  style={{ borderRadius: 100 }}
-                  source={{
-                    uri: 'https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp',
-                  }}
-                />
-                <View>
-                  <Text style={{ color: '#2bb730' }}>Homiloki</Text>
-                  <Text style={{ color: '#4f5e64' }}>in Ulaanbaatar</Text>
-                </View>
-              </View>
-              <Text style={{ fontWeight: '600', fontSize: 20, marginBottom: 10, marginTop: 10 }}>
-                Onon goliin hogiig tsverletsgeeye
-              </Text>
-              <Text>
+              <Text style={styles.cardTitle}>Onon goliin hogiig tsverletsgeeye</Text>
+              <Text style={{ color: 'white' }}>
                 As you embark upon each day, remember that within you lies an abundance of potential
                 waiting to be unleashed. You are capable of achieving greatness, of making a
                 difference, of leaving an indelible mark on the world. Take a moment to acknowledge
@@ -179,12 +138,26 @@ export default function TabOneScreen(): React.ReactNode {
           </TouchableOpacity>
           <FlatList
             data={vols}
-            // eslint-disable-next-line react/no-unused-prop-types
-            renderItem={({ item }: { item: Volunteer }) => {
+            renderItem={({ item }) => {
               return (
-                <View>
-                  <Text>{item.name}</Text>
-                </View>
+                <TouchableOpacity style={{ marginBottom: 20 }}>
+                  <View style={styles.line}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                      <Image
+                        height={50}
+                        width={50}
+                        style={{ borderRadius: 100 }}
+                        source={{
+                          uri: 'https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp',
+                        }}
+                      />
+                      <View>
+                        <Text style={{ color: '#2bb730' }}>{item.name}</Text>
+                        <Text style={{ color: '#4f5e64' }}>in Ulaanbaatar</Text>
+                      </View>
+                    </View>
+                  </View>
+                </TouchableOpacity>
               );
             }}
           />
@@ -197,36 +170,27 @@ export default function TabOneScreen(): React.ReactNode {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#181A20',
   },
   title: {
-    fontSize: 25,
+    fontSize: 23,
+    marginBottom: 20,
+    marginTop: 10,
+    color: '#06C149',
     fontWeight: 'bold',
-    width: 240,
-    color: 'white',
-    padding: 20,
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
   },
   flex: {
     justifyContent: 'center',
     alignItems: 'center',
   },
   line: {
-    borderColor: 'black',
-    borderWidth: 1,
     padding: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#1F222A',
     borderRadius: 20,
   },
   line1: {
-    borderColor: 'black',
-    borderWidth: 1,
     padding: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#1F222A',
     borderRadius: 20,
     marginRight: 15,
   },
@@ -237,9 +201,6 @@ const styles = StyleSheet.create({
   },
   card: {
     flex: 1,
-    // marginVertical: 4,
-    // marginHorizontal: 16,
-    // borderRadius: 5,
     overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
@@ -266,5 +227,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  cardTitle: {
+    fontWeight: '600',
+    fontSize: 20,
+    marginBottom: 10,
+    marginTop: 10,
+    color: 'white',
+  },
+  categoryPic: {
+    height: 60,
+    width: 60,
+    borderRadius: 100,
   },
 });
