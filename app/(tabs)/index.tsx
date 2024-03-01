@@ -111,7 +111,8 @@ export default function TabOneScreen(): React.ReactNode {
             </TouchableOpacity>
           </ScrollView>
           <Text style={styles.title}>Latiest volunteers</Text>
-          <TouchableOpacity style={{ marginBottom: 20 }}>
+          {/* <ScrollView horizontal> */}
+          <TouchableOpacity style={{ marginTop: 20 }}>
             <View style={styles.line}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                 <Image
@@ -136,6 +137,35 @@ export default function TabOneScreen(): React.ReactNode {
               </Text>
             </View>
           </TouchableOpacity>
+          <TouchableOpacity style={{ marginTop: 20 }}>
+            <View style={styles.line}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Image
+                  height={50}
+                  width={50}
+                  style={{ borderRadius: 100 }}
+                  source={{
+                    uri: 'https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp',
+                  }}
+                />
+                <View>
+                  <Text style={{ color: 'white' }}>Homiloki</Text>
+                  <Text style={{ color: '#06C149' }}>in Ulaanbaatar</Text>
+                </View>
+              </View>
+              <Text style={styles.cardTitle}>Onon goliin hogiig tsverletsgeeye</Text>
+              <Text style={{ color: 'white' }}>
+                As you embark upon each day, remember that within you lies an abundance of potential
+                waiting to be unleashed. You are capable of achieving greatness, of making a
+                difference, of leaving an indelible mark on the world. Take a moment to acknowledge
+                your strengths, your resilience, and your unwavering spirit.
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <Text style={{ color: '#06C149', marginBottom: 10, marginTop: 10, textAlign: 'right' }}>
+            see more...
+          </Text>
+          {/* </ScrollView> */}
           <FlatList
             data={vols}
             renderItem={({ item }) => {
@@ -174,7 +204,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 23,
-    marginBottom: 20,
     marginTop: 10,
     color: '#06C149',
     fontWeight: 'bold',
@@ -193,6 +222,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#1F222A',
     borderRadius: 20,
     marginRight: 15,
+    marginTop: 10,
   },
   scrollContainer: {
     height: 450,

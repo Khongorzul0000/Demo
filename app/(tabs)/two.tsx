@@ -22,7 +22,7 @@ export default function TabTwoScreen(): React.ReactNode {
               <Text>edit</Text>
               <Text>likes</Text>
             </View>
-            <Text style={{ fontWeight: '600', fontSize: 25, marginTop: 10 }}>
+            <Text style={{ fontWeight: '600', fontSize: 25, marginTop: 10, color: '#06C149' }}>
               Hiisen sain duriin ajiluud
             </Text>
             <ScrollView style={{ marginTop: 20, marginBottom: 20 }} horizontal>
@@ -37,14 +37,21 @@ export default function TabTwoScreen(): React.ReactNode {
                     }}
                   />
                   <View>
-                    <Text style={{ fontSize: 12, color: '#2bb730' }}>Homiloki</Text>
-                    <Text style={{ fontSize: 12 }}>Ulaanbaatar</Text>
+                    <Text style={{ fontSize: 12, color: 'white' }}>Homiloki</Text>
+                    <Text style={{ fontSize: 12, color: '#06C149' }}>Ulaanbaatar</Text>
                   </View>
                 </View>
-                <Text style={{ fontWeight: '600', fontSize: 18, marginBottom: 9, marginTop: 9 }}>
+                <Text
+                  style={{
+                    fontWeight: '600',
+                    fontSize: 18,
+                    marginBottom: 9,
+                    marginTop: 9,
+                    color: 'white',
+                  }}>
                   Onon goliin hogiig tsverletsgeeye
                 </Text>
-                <Text>
+                <Text style={{ color: 'white' }}>
                   As you embark upon each day, remember that within you lies an abundance of
                   potential waiting to be unleashed. You are capable of achieving greatness, of
                   making a difference...
@@ -61,14 +68,21 @@ export default function TabTwoScreen(): React.ReactNode {
                     }}
                   />
                   <View>
-                    <Text style={{ fontSize: 12, color: '#2bb730' }}>Homiloki</Text>
-                    <Text style={{ fontSize: 12 }}>Ulaanbaatar</Text>
+                    <Text style={{ fontSize: 12, color: 'white' }}>Homiloki</Text>
+                    <Text style={{ fontSize: 12, color: '#06C149' }}>Ulaanbaatar</Text>
                   </View>
                 </View>
-                <Text style={{ fontWeight: '600', fontSize: 18, marginBottom: 9, marginTop: 9 }}>
+                <Text
+                  style={{
+                    fontWeight: '600',
+                    fontSize: 18,
+                    marginBottom: 9,
+                    marginTop: 9,
+                    color: 'white',
+                  }}>
                   Onon goliin hogiig tsverletsgeeye
                 </Text>
-                <Text>
+                <Text style={{ color: 'white' }}>
                   As you embark upon each day, remember that within you lies an abundance of
                   potential waiting to be unleashed. You are capable of achieving greatness, of
                   making a difference...
@@ -85,14 +99,21 @@ export default function TabTwoScreen(): React.ReactNode {
                     }}
                   />
                   <View>
-                    <Text style={{ fontSize: 12, color: '#2bb730' }}>Homiloki</Text>
-                    <Text style={{ fontSize: 12 }}>Ulaanbaatar</Text>
+                    <Text style={{ fontSize: 12, color: 'white' }}>Homiloki</Text>
+                    <Text style={{ fontSize: 12, color: '#06C149' }}>Ulaanbaatar</Text>
                   </View>
                 </View>
-                <Text style={{ fontWeight: '600', fontSize: 18, marginBottom: 9, marginTop: 9 }}>
+                <Text
+                  style={{
+                    fontWeight: '600',
+                    fontSize: 18,
+                    marginBottom: 9,
+                    marginTop: 9,
+                    color: 'white',
+                  }}>
                   Onon goliin hogiig tsverletsgeeye
                 </Text>
-                <Text>
+                <Text style={{ color: 'white' }}>
                   As you embark upon each day, remember that within you lies an abundance of
                   potential waiting to be unleashed. You are capable of achieving greatness, of
                   making a difference...
@@ -110,7 +131,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#181A20',
   },
   title: {
     fontSize: 25,
@@ -122,10 +143,8 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   line1: {
-    borderColor: 'black',
-    borderWidth: 1,
     padding: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#1F222A',
     borderRadius: 20,
     marginRight: 15,
     width: 300,

@@ -75,7 +75,7 @@ const TabLayout: React.FC = () => {
         }}
       />
       <Tabs.Screen
-        name="report"
+        name="login"
         options={{
           tabBarIcon: ({ focused }) => {
             // eslint-disable-next-line no-unused-expressions
